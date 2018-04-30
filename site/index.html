@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="diamond.png">
+    <title>Emeraude</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header id="entête" class="brdone">
+      <div class="brdone">
+
+          <h1>Emeraude</h1><small>Votre meilleur choix</small></div>
+      <nav class="brdone">
+          <ul>
+              <li><a href="index.html">Acceuil</a></li>
+              <li><a href="produits.html">Produits</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+    <div id="corps">
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="diamond.png" >
+        </div>
+        <div class="mySlides fade">
+          <img src="music.jpg" class="image_slider">
+        </div>
+        <div class="mySlides fade">
+          <img src="music1.jpg" class="image_slider">
+        </div>
+        <div class="mySlides fade">
+          <img src="music2.png" class="image_slider">
+        </div>
+
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+
+        <section id="premier" class="brdone">
+
+            <h2>Notre Société: </h2>
+            <p>Depuis plus de 20 ans nous avons votre confiance de vous offrir la meilleure qualité des instruments musicaux</p>
+
+            <p>Nous Vous garantissons les meilleures marques sur le marché</p>
+
+            <p>Votre satisfaction c'est notre BUT.</p>
+
+        </section>
+        <section id="second" class="brdone">
+          <h2>Espace client</h2>
+          <p><a href="compte.html">créer un Compte</a></p>
+          <p><a href="login.html"> Login</a></p>
+
+          <p><audio id="audio" controls preload="auto" >
+          <source src="[HQ] Apologize - One Republic (Piano cover).mp3" > </source>
+          </audio></p>
+
+        </section>
+        <footer class="brdone"> &copy; Emeraude   101 Rue mars cité planètes <br>Pour plus d'informations <a href="contact.html">contactez nous</a>  </footer>
+    </div>
+
+
+    <script type="text/javascript">
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+           slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000);
+    }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="diamond.png">
+    <title>Emeraude</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="entête" class="brdone">
+      <div class="brdone">
+
+          <h1>Emeraude</h1><small>Votre meilleur choix</small></div>
+      <nav class="brdone">
+          <ul>
+              <li><a href="index.html">Acceuil</a></li>
+              <li><a href="produits.html">Produits</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+    <div id="corps" class="contact">
+        <section id="premier" class="brdone">
+          <form method="post" onSubmit="return validation(this)">
+          <h3>Nom :<h3>
+            <input type="texte" style="width: 100%;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-color: darkgrey;
+            color: white;">
+          <h3>Prénom:</h3>
+          <input type="texte" style="width: 100%;
+          border: 1px solid grey;
+          border-radius: 5px;
+          background-color: darkgrey;
+          color: white;">
+          <h3>e-mail:</h3>
+          <input id="e-mail" type="texte" placeholder="nom@example.com">
+          <h3>Mot de passe:</h3>
+          <input id="userPassword" name="mdp1" type="password">
+            <h3>Confirmez votre mot de passe:</h3>
+            <input id="userPassword" name="mdp2" type="password">
+          <input type="submit">
+
+        </form>
+        <br>
+        </section>
+        <section id="second" class="brdone">
+          <h2>Espace client</h2>
+          <p><a href="compte.html">créer un Compte</a></p>
+          <p><a href="login.html"> Login</a></p>
+
+          <p><audio controls preload="auto">
+<source src="[HQ] Apologize - One Republic (Piano cover).mp3" > </source>
+</audio></p>
+
+        </section>
+        <footer class="brdone"> &copy; Emeraude   101 Rue mars cité planètes <br>Pour plus d'informations <a href="contact.html">contactez nous</a>  </footer>
+    </div>
+    <script language="JavaScript">
+function validation(f) {
+  if (f.mdp1.value == '' || f.mdp2.value == '') {
+    alert('Tous les champs ne sont pas remplis');
+    f.mdp1.focus();
+    f.mdp1.style.backgroundColor = "#FFD9CF";
+    return false;
+    }
+  else if (f.mdp1.value != f.mdp2.value) {
+    alert('Ce ne sont pas les mêmes mots de passe!');
+    f.mdp1.focus();
+    f.mdp1.style.backgroundColor = "#FFD9CF";
+    return false;
+    }
+  else if (f.mdp1.value == f.mdp2.value) {
+    return true;
+    }
+  else {
+    f.mdp1.focus();
+    return false;
+    }
+  }
+</script>
+
+</html>
